@@ -1,44 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Fylo landing page with two column layout</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dist/style.css">
+
 </head>
+
 <body>
 
-  Features
+  <header class="header">
+    <nav class="flex flex-jc-sb flex-ai-c">
+      <a class="header__logo" href="#">
+        <img src="/images/logo.svg" alt="fylo">
+      </a>
+      <div class="header__links">
+        <a href="#">Features</a>
+        <a href="#">Team</a>
+        <a href="#">Sign in</a>
+      </div>
+    </nav>
+  </header>
+  <section class="hero container">
+    <div class="hero__image"></div>
+    <div class="hero-content">
+      <div class="hero__text">
+        <h1>All your files in one secure location, accessible anywhere.</h1>
+        <p>Fylo stores your most important files in one secure location.
+          Access them wherever you need, share and collaborate with friends,
+          family, and co-workers.</p>
+      </div>
+      <div class="hero__cta flex flex-col">
+        <input class="flex-jc-c" type="text" name="" id="" placeholder="Enter your email...">
+        <button class="flex-jc-c">Get Started</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features
   Team
   Sign In
 
   All your files in one secure location, accessible anywhere.
 
-  Fylo stores your most important files in one secure location. 
-  Access them wherever you need, share and collaborate with friends, 
+  Fylo stores your most important files in one secure location.
+  Access them wherever you need, share and collaborate with friends,
   family, and co-workers.
 
   Get Started
 
   Stay productive, wherever you are
 
-  Never let location be an issue when accessing your files. Fylo has you 
+  Never let location be an issue when accessing your files. Fylo has you
   covered for all of your file storage needs.
 
-  Securely share files and folders with friends, family and colleagues for 
+  Securely share files and folders with friends, family and colleagues for
   live collaboration. No email attachments required!
 
   See how Fylo works
 
-  Fylo has improved our team productivity by an order of magnitude. Since 
+  Fylo has improved our team productivity by an order of magnitude. Since
   making the switch our team has become a well-oiled collaboration machine.
 
   Kyle Burton
@@ -46,7 +89,7 @@
 
   Get early access today
 
-  It only takes a minute to sign up and our free starter tier is extremely generous. 
+  It only takes a minute to sign up and our free starter tier is extremely generous.
   If you have any questions, our support team would be happy to help you.
 
   Get Started For Free
@@ -65,9 +108,11 @@
 
   <footer>
     <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="#">Your Name Here</a>.
     </p>
-  </footer>
+  </footer> -->
+  <script src="./js/script.js"></script>
 </body>
+
 </html>

@@ -1,0 +1,47 @@
+.header {
+  font-family: "Raleway", sans-serif;
+  nav {
+    padding: 1.5rem;
+
+    @include breakpoint-up(large) {
+      padding: 4rem;
+    }
+  }
+
+  &__logo {
+    img {
+      max-height: 1.5rem;
+
+      @include breakpoint-up(large) {
+        max-height: 4rem;
+      }
+    }
+  }
+
+  &__links {
+    a {
+      color: $veryDarkBlue;
+      font-size: $font-sm;
+      font-weight: 400;
+
+      @include breakpoint-up(medium) {
+        font-size: $font-md;
+      }
+      &:not(:last-child) {
+        margin-right: 1.5rem;
+
+        @include breakpoint-up(medium) {
+          margin-right: 2rem;
+        }
+
+        @include breakpoint-up(large) {
+          margin-right: 3rem;
+        }
+
+        @include breakpoint-up(large) {
+          margin-right: 3.5rem;
+        }
+      }
+    }
+  }
+}
