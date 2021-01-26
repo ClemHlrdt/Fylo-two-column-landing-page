@@ -1,0 +1,105 @@
+.hero {
+  margin-top: 1.75rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-top: 0;
+
+  @include breakpoint-up(large) {
+    margin-bottom: 11rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__image {
+    order: 0;
+    background-image: url("/images/illustration-1.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 14.375rem;
+    @include breakpoint-up(large) {
+      order: 1;
+    }
+  }
+
+  &__content {
+    order: 1;
+
+    @include breakpoint-up(xlarge) {
+      padding-right: 3.375rem;
+      order: 0;
+    }
+  }
+
+  &__text {
+    text-align: center;
+
+    @include breakpoint-up(medium) {
+      text-align: left;
+      max-width: 25rem;
+    }
+
+    @include breakpoint-up(xlarge) {
+      max-width: 38rem;
+    }
+
+    h1 {
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+
+      @include breakpoint-up(xlarge) {
+        line-height: 1.6;
+        font-size: 2.5rem;
+      }
+    }
+
+    p {
+      font-size: $font-xs;
+
+      @include breakpoint-up(xlarge) {
+        font-size: $font-lg;
+      }
+    }
+  }
+
+  &__cta {
+    font-family: "Raleway", sans-serif;
+    margin-top: 2rem;
+    margin-bottom: 5.75rem;
+
+    @include breakpoint-up(large) {
+      flex-direction: row;
+    }
+
+    input {
+      border: 1px solid $lightGray;
+      padding: 1rem;
+      border-radius: 5px;
+      box-shadow: $shadow;
+      @include breakpoint-up(large) {
+        flex: 1;
+        margin-right: 1.125rem;
+        max-width: 20rem;
+      }
+    }
+
+    button {
+      flex: 0 0 auto;
+      margin-top: 1rem;
+      background-color: $brightBlue;
+      color: $white;
+      font-family: "Raleway", sans-serif;
+      font-size: $font-sm;
+      font-weight: 700;
+      border: 0;
+      padding: 1rem;
+      border-radius: 5px;
+      box-shadow: $shadow;
+
+      @include breakpoint-up(large) {
+        margin-top: 0;
+        padding: 1rem 4rem;
+        margin-right: 3.375rem;
+      }
+    }
+  }
+}

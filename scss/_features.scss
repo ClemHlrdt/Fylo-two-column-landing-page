@@ -1,0 +1,199 @@
+.features {
+  padding-top: 4rem;
+  padding-bottom: 3.5rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  position: relative;
+  background-color: $lightGrayishBlue;
+  text-align: center;
+
+  @include breakpoint-up(medium) {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  @include breakpoint-up(medium) {
+    grid-template-columns: auto 1fr;
+    grid-gap: 5rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  &::before {
+    content: "";
+    background-image: url("/images/bg-curve-mobile.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 20%;
+    position: absolute;
+    height: 60px;
+    z-index: 10;
+    top: -60px;
+    left: 0;
+    width: 100%;
+
+    @include breakpoint-up(medium) {
+      background-image: url("/images/bg-curve-desktop.svg");
+      top: -80px;
+      height: 80px;
+    }
+  }
+
+  &__image {
+    order: 0;
+    min-height: 15.625rem;
+    width: 100%;
+    object-fit: contain;
+
+    @include breakpoint-up(medium) {
+      order: 1;
+    }
+  }
+
+  &__text {
+    order: 1;
+    text-align: left;
+    margin-top: 5.625rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include breakpoint-up(medium) {
+      margin-top: 0;
+      order: 0;
+      display: block;
+    }
+
+    h2 {
+      font-size: $font-md;
+      font-weight: 700;
+      font-family: "Raleway", "sans-serif";
+      margin: 0;
+
+      @include breakpoint-up(medium) {
+        font-size: 2rem;
+      }
+
+      @include breakpoint-up(xlarge) {
+        font-size: 2.5rem;
+      }
+    }
+
+    & > p {
+      &:first-child {
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+      }
+
+      &:last-of-type {
+        margin-bottom: 2.5rem;
+
+        @include breakpoint-up(medium) {
+          margin-bottom: 1.75rem;
+        }
+      }
+
+      color: $desaturatedBlue;
+      font-size: $font-sm;
+
+      @include breakpoint-up(medium) {
+        max-width: 30rem;
+      }
+    }
+
+    a {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      color: $moderateCyan;
+      font-size: $font-xs;
+      position: relative;
+      font-family: "Raleway", "sans-serif";
+      border-bottom: 1px solid $moderateCyan;
+      padding-bottom: 0.5rem;
+
+      @include breakpoint-up(medium) {
+        font-size: $font-normal;
+      }
+
+      img {
+        margin-left: 0.625rem;
+        height: 12px;
+        width: auto;
+        left: 0;
+        top: 50%;
+        z-index: 10;
+        box-shadow: $shadow;
+
+        @include breakpoint-up(medium) {
+          height: 16px;
+        }
+      }
+    }
+  }
+}
+
+.card {
+  margin: 2.5rem 1.5rem 0;
+  background: $white;
+  border-radius: 5px;
+  box-shadow: $shadow;
+  padding: 1.375rem 1.75rem;
+  color: $veryDarkBlue;
+  max-width: 22rem;
+
+  @include breakpoint-up(medium) {
+    margin: 2.5rem 0rem 5rem;
+  }
+
+  &__quote {
+    height: 10px;
+    width: auto;
+  }
+
+  &__text {
+    font-size: $font-tiny; //10px
+    position: relative;
+    line-height: 2;
+    margin: 0;
+    padding-bottom: 1.125rem;
+
+    @include breakpoint-up(medium) {
+      padding-top: 1.125rem;
+      font-size: $font-xs;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 24px;
+      width: auto;
+      border-radius: 50%;
+      margin-right: 0.5rem;
+
+      @include breakpoint-up(medium) {
+        height: 2rem;
+      }
+    }
+
+    h4 {
+      font-size: $font-xs;
+      color: $veryDarkBlue;
+      font-family: "Raleway", "sans-serif";
+      font-weight: 700;
+      margin: 0;
+      padding: 0;
+    }
+
+    p {
+      font-size: 0.5rem;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}

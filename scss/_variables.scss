@@ -9,6 +9,14 @@ $lightGray: hsl(0, 0%, 75%);
 $white: hsl(0, 0%, 100%);
 
 // Font sizes
-$font-sm: 0.75rem;
-$font-md: 1.125rem;
-$font-lg: 1.25rem;
+$font-tiny: 0.625rem; // 10px
+$font-xs: 0.75rem; // 12px
+$font-sm: 0.875rem; // 14px
+$font-normal: 1rem; // 16px
+$font-md: 1.125rem; // 18px
+$font-lg: 1.25rem; // 20px
+$font-xl: 1.5rem; // 24px
+
+// Box shadow
+
+$shadow: 0 0 10px rgba(0, 0, 0, 0.035), 0 0 80px rgba(0, 0, 0, 0.07);

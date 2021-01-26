@@ -1,0 +1,86 @@
+.register {
+  background-color: $desaturatedBlue;
+  color: $white;
+  //padding: 3.75rem 2.5rem 4.5rem;
+  padding-top: 2.25rem;
+  padding-bottom: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+
+  @include breakpoint-up(medium) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10rem;
+    align-items: center;
+    text-align: left;
+    padding-top: 6.875rem;
+    padding-bottom: 5.5rem;
+  }
+
+  &__text {
+    h2 {
+      font-family: "Raleway", "sans-serif";
+      font-weight: 700;
+      font-size: $font-md;
+      margin: 0;
+
+      @include breakpoint-up(large) {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    p {
+      font-size: $font-sm;
+      line-height: 2;
+      max-width: 17.5rem;
+      margin-top: 1.5rem;
+
+      @include breakpoint-up(large) {
+        font-size: $font-normal;
+        line-height: 1.5;
+        max-width: 32rem;
+      }
+    }
+  }
+
+  &__cta {
+    padding: 0 1.75rem;
+    margin-top: 1.75rem;
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint-up(large) {
+      //justify-self: flex-end;
+      margin-top: 0;
+    }
+  }
+
+  input,
+  button {
+    font-family: "Raleway", "sans-serif";
+    flex: 1;
+    padding: 0.75rem;
+  }
+
+  input {
+    margin-bottom: 0.5rem;
+
+    @include breakpoint-up(large) {
+      margin-bottom: 1rem;
+      max-width: 30rem;
+    }
+  }
+
+  button {
+    font-size: $font-xs;
+    background-color: $brightBlue;
+    color: $white;
+    border: 0;
+    font-weight: 700;
+
+    @include breakpoint-up(large) {
+      width: 33%;
+    }
+  }
+}
