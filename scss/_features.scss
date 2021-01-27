@@ -22,7 +22,7 @@
 
   &::before {
     content: "";
-    background-image: url("/images/bg-curve-mobile.svg");
+    background-image: url("../images/bg-curve-mobile.svg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center 20%;
@@ -34,7 +34,7 @@
     width: 100%;
 
     @include breakpoint-up(medium) {
-      background-image: url("/images/bg-curve-desktop.svg");
+      background-image: url("../images/bg-curve-desktop.svg");
       top: -80px;
       height: 80px;
     }
