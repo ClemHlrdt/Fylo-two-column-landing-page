@@ -25,3 +25,33 @@ $breakpoints-down: (
     @content;
   }
 }
+
+@mixin email-field {
+  .email {
+    position: relative;
+    border: 1px solid $lightGray;
+    padding: 1rem;
+
+    box-shadow: $shadow;
+
+    &--error {
+      border: 1px solid $pinkish;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+@mixin error-message {
+  .error {
+    display: none;
+    &--visible {
+      display: block;
+      position: absolute;
+      z-index: 10;
+      top: 55px;
+      left: 0;
+      color: $pinkish;
+      font-size: 12px;
+    }
+  }
+}

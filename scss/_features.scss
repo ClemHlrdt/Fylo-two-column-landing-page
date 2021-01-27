@@ -113,6 +113,12 @@
       font-family: "Raleway", "sans-serif";
       border-bottom: 1px solid $moderateCyan;
       padding-bottom: 0.5rem;
+      transition: opacity 0.2s ease-in;
+
+      &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
 
       @include breakpoint-up(medium) {
         font-size: $font-normal;

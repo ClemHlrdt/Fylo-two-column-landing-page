@@ -1,6 +1,7 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -18,9 +19,15 @@ body {
 }
 
 a,
+a:link,
 a:visited,
 a:hover {
   text-decoration: none;
+  color: inherit;
+}
+
+input {
+  border: none;
 }
 
 // Flexbox styles
@@ -50,5 +57,18 @@ a:hover {
 
   @include breakpoint-up(large) {
     padding: 4rem 5rem;
+  }
+}
+
+footer {
+  position: relative;
+  .attribution {
+    position: absolute;
+    text-align: center;
+    font-size: 10px;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 10px;
+    color: $white;
   }
 }

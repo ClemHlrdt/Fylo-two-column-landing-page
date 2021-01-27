@@ -8,7 +8,7 @@
   grid-template-columns: 1fr;
   text-align: center;
 
-  @include breakpoint-up(medium) {
+  @include breakpoint-up(large) {
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10rem;
     align-items: center;
@@ -34,6 +34,7 @@
       font-size: $font-sm;
       line-height: 2;
       max-width: 17.5rem;
+      margin: 0 auto;
       margin-top: 1.5rem;
 
       @include breakpoint-up(large) {
@@ -49,39 +50,54 @@
     margin-top: 1.75rem;
     display: flex;
     flex-direction: column;
+    position: relative;
 
     @include breakpoint-up(large) {
       //justify-self: flex-end;
       margin-top: 0;
     }
-  }
 
-  input,
-  button {
-    font-family: "Raleway", "sans-serif";
-    flex: 1;
-    padding: 0.75rem;
-    box-shadow: $shadow;
-  }
-
-  input {
-    margin-bottom: 0.5rem;
-
-    @include breakpoint-up(large) {
-      margin-bottom: 1rem;
-      max-width: 30rem;
+    input,
+    button {
+      font-family: "Raleway", "sans-serif";
+      flex: 1;
+      padding: 0.75rem;
+      box-shadow: $shadow;
     }
-  }
 
-  button {
-    font-size: $font-xs;
-    background-color: $brightBlue;
-    color: $white;
-    border: 0;
-    font-weight: 700;
+    .email {
+      flex: 2;
+      margin-bottom: 0.5rem;
+      @include breakpoint-up(large) {
+        margin-bottom: 1rem;
+        max-width: 30rem;
+      }
+    }
+    @include email-field;
 
-    @include breakpoint-up(large) {
-      width: 33%;
+    @include error-message;
+
+    span.error--visible {
+      left: 1.75rem;
+      color: $white;
+    }
+
+    button {
+      font-size: $font-xs;
+      background-color: $brightBlue;
+      color: $white;
+      border: 0;
+      font-weight: 700;
+      transition: opacity 0.2s ease-in;
+
+      &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+
+      @include breakpoint-up(large) {
+        width: 33%;
+      }
     }
   }
 }
