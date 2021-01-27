@@ -245,7 +245,7 @@ footer .attribution {
   -webkit-box-ordinal-group: 1;
       -ms-flex-order: 0;
           order: 0;
-  background-image: url("/images/illustration-1.svg");
+  background-image: url("./images/illustration-1.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
