@@ -96,6 +96,7 @@
       box-shadow: $shadow;
 
       @include breakpoint-up(large) {
+        max-width: 13rem;
         margin-top: 0;
         padding: 1rem 4rem;
         margin-right: 3.375rem;

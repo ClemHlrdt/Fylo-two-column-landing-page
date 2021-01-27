@@ -1,0 +1,105 @@
+.footer {
+  background: $veryDarkBlue;
+  color: $white;
+  padding: 4rem 2.5rem 3rem;
+
+  @include breakpoint-up(large) {
+    padding: 6.875rem 5rem 4.5rem;
+  }
+  &__logo {
+    display: inline-block;
+    min-height: 3.25rem;
+    margin-bottom: 2.75rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    @include breakpoint-up(large) {
+      flex-direction: row;
+    }
+  }
+
+  &__contact,
+  &__info,
+  &__legal,
+  &__social {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__contact {
+    margin-bottom: 4rem;
+
+    @include breakpoint-up(large) {
+      flex: 0.33;
+      margin-bottom: 0;
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+
+      img {
+        height: 18px;
+        width: auto;
+        margin-right: 1.25rem;
+      }
+
+      span {
+        font-weight: $font-sm;
+      }
+    }
+  }
+
+  &__info {
+    margin-bottom: 3.5rem;
+
+    @include breakpoint-up(large) {
+      flex: 0.21;
+      margin-bottom: 0;
+    }
+  }
+
+  &__legal {
+    margin-bottom: 3.25rem;
+
+    @include breakpoint-up(large) {
+      flex: 0.2;
+      margin-bottom: 0;
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+
+    @include breakpoint-up(large) {
+      flex: 0.23;
+      justify-content: flex-start;
+    }
+
+    li {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.5rem;
+      border-radius: 100%;
+      border: 1px solid $white;
+      width: 1.75rem;
+      height: 1.75rem;
+      &:not(:last-of-type) {
+        margin-right: $font-tiny;
+      }
+    }
+  }
+}

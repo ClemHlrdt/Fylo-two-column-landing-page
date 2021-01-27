@@ -255,6 +255,7 @@ a:hover {
 
 @media (min-width: 64em) {
   .hero__cta button {
+    max-width: 13rem;
     margin-top: 0;
     padding: 1rem 4rem;
     margin-right: 3.375rem;
@@ -604,6 +605,8 @@ a:hover {
       -ms-flex: 1;
           flex: 1;
   padding: 0.75rem;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.035), 0 0 80px rgba(0, 0, 0, 0.07);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.035), 0 0 80px rgba(0, 0, 0, 0.07);
 }
 
 .register input {
@@ -629,5 +632,156 @@ a:hover {
   .register button {
     width: 33%;
   }
+}
+
+.footer {
+  background: #070439;
+  color: white;
+  padding: 4rem 2.5rem 3rem;
+}
+
+@media (min-width: 64em) {
+  .footer {
+    padding: 6.875rem 5rem 4.5rem;
+  }
+}
+
+.footer__logo {
+  display: inline-block;
+  min-height: 3.25rem;
+  margin-bottom: 2.75rem;
+}
+
+.footer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+@media (min-width: 64em) {
+  .footer__content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.footer__contact, .footer__info, .footer__legal, .footer__social {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer__contact li:not(:last-child), .footer__info li:not(:last-child), .footer__legal li:not(:last-child), .footer__social li:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.footer__contact {
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 64em) {
+  .footer__contact {
+    -webkit-box-flex: 0.33;
+        -ms-flex: 0.33;
+            flex: 0.33;
+    margin-bottom: 0;
+  }
+}
+
+.footer__contact li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer__contact li img {
+  height: 18px;
+  width: auto;
+  margin-right: 1.25rem;
+}
+
+.footer__contact li span {
+  font-weight: 0.875rem;
+}
+
+.footer__info {
+  margin-bottom: 3.5rem;
+}
+
+@media (min-width: 64em) {
+  .footer__info {
+    -webkit-box-flex: 0.21;
+        -ms-flex: 0.21;
+            flex: 0.21;
+    margin-bottom: 0;
+  }
+}
+
+.footer__legal {
+  margin-bottom: 3.25rem;
+}
+
+@media (min-width: 64em) {
+  .footer__legal {
+    -webkit-box-flex: 0.2;
+        -ms-flex: 0.2;
+            flex: 0.2;
+    margin-bottom: 0;
+  }
+}
+
+.footer__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 64em) {
+  .footer__social {
+    -webkit-box-flex: 0.23;
+        -ms-flex: 0.23;
+            flex: 0.23;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+.footer__social li {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem;
+  border-radius: 100%;
+  border: 1px solid white;
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.footer__social li:not(:last-of-type) {
+  margin-right: 0.625rem;
 }
 /*# sourceMappingURL=style.css.map */
